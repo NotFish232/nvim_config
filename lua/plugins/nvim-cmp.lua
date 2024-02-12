@@ -1,3 +1,4 @@
+-- nvim-cmp.nvim
 return {
   -- Autocompletion
   'hrsh7th/nvim-cmp',

@@ -1,3 +1,4 @@
+-- barbar.nvim
 return {
   'romgrk/barbar.nvim',
   dependencies = {
