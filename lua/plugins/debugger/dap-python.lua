@@ -8,7 +8,7 @@ return {
             {
                 type = "python",
                 request = "launch",
-                name = "Launch Via hython",
+                name = "Launch Via Python",
                 program = "${file}",
                 python = "/opt/hfs19.5.569/bin/hython"
             }
