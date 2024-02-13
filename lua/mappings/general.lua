@@ -10,7 +10,7 @@ vim.keymap.set({ 'n', 'v', 't' }, '<C-t>', '<C-\\><C-n>:tab term<Enter>i', { nor
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
 
 -- ctrl j for escape 
-vim.keymap.set({ 'i', 't' }, '<C-j>', '<C-\\><C-n><Esc>', { noremap = true, silent = true })
+vim.keymap.set({ 'i', 't', 'n', 'v' }, '<C-j>', '<C-\\><C-n><Esc>', { noremap = true, silent = true })
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
