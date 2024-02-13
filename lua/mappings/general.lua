@@ -1,6 +1,6 @@
 -- switch tabs with tab and shift tab
-vim.keymap.set({ 'n', 'v', 't' }, '<Tab>', '<C-\\><C-n>:bnext<Enter>', { noremap = true, silent = true })
-vim.keymap.set({ 'n', 'v', 't' }, '<S-Tab>', '<C-\\><C-n>:bprevious<Enter>', { noremap = true, silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Tab>', '<C-\\><C-n>:bnext<Enter>', { noremap = true, silent = true })
+vim.keymap.set({ 'n', 'v' }, '<S-Tab>', '<C-\\><C-n>:bprevious<Enter>', { noremap = true, silent = true })
 
 -- close tabs with shift
 vim.keymap.set({ 'n', 'v', 't' }, '<C-w>', '<C-\\><C-n>:bd!<Enter>', { noremap = true, silent = true })
@@ -25,3 +25,7 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+
+-- Switch to the next focused window
+vim.keymap.set({ 'n', 't', 'v' }, '<leader><Tab>', '<C-\\><C-n><C-w>w', {noremap = true, silent = true})

@@ -36,5 +36,8 @@ vim.o.timeoutlen = 300
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- NOTE: You should make sure your terminal supports this
+-- NOTE: You should make  r"/\b([^\Waeiou]*([aeiou])(?!\w*\2)){5}\w*/i",sure your terminal supports this
 vim.o.termguicolors = true
+
+vim.cmd([[ set relativenumber ]])
+vim.cmd([[ set autochdir ]])

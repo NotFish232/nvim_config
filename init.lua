@@ -148,6 +148,7 @@ require('configs.telescope')
 require('mappings.general')
 require('mappings.dap')
 require('mappings.telescope')
+require('mappings.nvim-tree')
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -162,6 +163,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
+require("nvim-tree").setup {}
+
 require('telescope').setup {
   defaults = {
     mappings = {
