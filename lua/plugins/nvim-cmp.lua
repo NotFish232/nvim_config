@@ -2,7 +2,7 @@
 return {
   -- Autocompletion
   'hrsh7th/nvim-cmp',
-  lazy = true,
+  
   dependencies = {
     -- Snippet Engine & its associated nvim-cmp source
     {
