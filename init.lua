@@ -121,12 +121,11 @@ require('lazy').setup({
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
-  { import = 'plugins' },
   { import = 'plugins.theme' },
+  { import = 'plugins' },
   { import = 'plugins.editor' },
   { import = 'plugins.lsp' },
   { import = 'plugins.debugger' }
-
 }, {})
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
@@ -136,7 +135,11 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 )
 
 
+
+
+
 require('configs.general')
+require('configs.telescope')
 
 -- [[ Basic Keymaps ]]
 

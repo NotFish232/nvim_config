@@ -1,6 +1,7 @@
 -- dap-python.nvim
 return {
     "mfussenegger/nvim-dap-python",
+    lazy = true,
     config = function()
         require("dap-python").setup("/bin/python3")
         table.insert(

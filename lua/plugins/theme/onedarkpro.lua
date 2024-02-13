@@ -1,12 +1,10 @@
 -- onedarkpro.nvim
 return {
   'olimorris/onedarkpro.nvim',
-  priority = 1000,
+  priority = 10000,
   lazy = false,
   config = function()
-    require('onedarkpro').setup {
-      style = 'darker',
-    }
+    require('onedarkpro').setup({})
     require('onedarkpro').load()
   end,
 }
