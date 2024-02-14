@@ -140,16 +140,6 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 
 
 
-require('configs.general')
-require('configs.telescope')
-
--- [[ Basic Keymaps ]]
-
-require('mappings.general')
-require('mappings.dap')
-require('mappings.telescope')
-require('mappings.nvim-tree')
-
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
@@ -439,6 +429,17 @@ cmp.setup {
     { name = 'path' },
   },
 }
+
+require('configs.general')
+require('configs.telescope')
+
+-- [[ Basic Keymaps ]]
+
+require('mappings.general')
+require('mappings.dap')
+require('mappings.telescope')
+require('mappings.nvim-tree')
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
