@@ -1,0 +1,1 @@
+vim.keymap.set({ 'n', 'v' , 'i' }, '<C-u>', '<cmd>Telescope undo<cr>', {noremap = true, silent = true})

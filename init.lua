@@ -153,7 +153,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- [[ Configure Telescope ]]
 -- See `:help telescope` and `:help telescope.setup()`
-require("nvim-tree").setup {}
+require("nvim-tree").setup {
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+  },
+}
 
 require('telescope').setup {
   defaults = {
@@ -439,6 +444,7 @@ require('mappings.general')
 require('mappings.dap')
 require('mappings.telescope')
 require('mappings.nvim-tree')
+require('mappings.telescope-undo')
 
 
 -- The line beneath this is called `modeline`. See `:help modeline`
