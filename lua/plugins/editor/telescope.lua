@@ -1,7 +1,6 @@
 -- nvim-telescope
 return {
   'nvim-telescope/telescope.nvim',
-  
   dependencies = {
     {
       'nvim-lua/plenary.nvim',
@@ -13,7 +12,7 @@ return {
     -- requirements installed.
     {
       'nvim-telescope/telescope-fzf-native.nvim',
-      
+
       -- NOTE: If you are having trouble with this installation,
       --       refer to the README for telescope-fzf-native for more instructions.
       build = 'make',

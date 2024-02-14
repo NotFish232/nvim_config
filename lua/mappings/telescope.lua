@@ -41,9 +41,16 @@ local function find_files_git_root()
     end
 end
 
+local function find_files_code_dir()
+    require('telescope.builtin').find_files {
+        search_dirs = { "~/code/" },
+    }
+end
+
+
 vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
 vim.api.nvim_create_user_command('FindFilesGitRoot', find_files_git_root, {})
-
+vim.api.nvim_create_user_command('FindFilesCodeDir', find_files_code_dir, {})
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
@@ -71,5 +78,6 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', ':FindFilesGitRoot<cr>', { desc = '[S]earch by [g]rep on Git Root' })
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
+vim.keymap.set('n', '<leader>sc', ':FindFilesCodeDir<cr>', { desc = '[S]earch by [G]rep on Code Dir' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
