@@ -1,0 +1,7 @@
+vim.defer_fn(function()
+    require('setups.barbar')
+    require('setups.lualine')
+    require('setups.nvim-tree')
+    require('setups.telescope')
+    require('setups.nvim-treesitter')
+end, 0)
