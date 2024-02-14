@@ -39,5 +39,11 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make  r"/\b([^\Waeiou]*([aeiou])(?!\w*\2)){5}\w*/i",sure your terminal supports this
 vim.o.termguicolors = true
 
+-- relative line numbers (for rfu's sake)
 vim.cmd([[ set relativenumber ]])
+
+-- auto change dir when telescoping or otherwise selecting file
 vim.cmd([[ set autochdir ]])
+
+-- have lualine be global instead of on selected buffer
+vim.opt.laststatus = 3
