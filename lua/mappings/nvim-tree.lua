@@ -1,1 +1,1 @@
-vim.keymap.set({ 'n', 'v' }, '<C-b>', '<C-\\><C-n>:NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.keymap.set({ 'n', 'v' }, '<C-b>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
