@@ -128,7 +128,17 @@ require('which-key').register({
 local servers = {
   clangd = {},
   bashls = {},
-  pylsp = {},
+  pylsp = {
+    pylsp = {
+      plugins = {
+        black = { enabled = true, },
+        flake8 = { enabled = true, ignore = { 'E203', 'W503' }, maxLineLength = 88 },
+        mccabe = { enabled = false },
+        pycodestyle = { enabled = false },
+        pyflakes = { enabled = false },
+      },
+    },
+  },
   rust_analyzer = {
     ['rust-analyzer'] = {
       checkOnSave = {
