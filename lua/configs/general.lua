@@ -44,5 +44,8 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.statuscolumn = "%s %l %r "
 
+-- dont use regex when searching
+vim.cmd([[ set nomagic ]])
+
 -- auto change dir when telescoping or otherwise selecting file
 vim.cmd([[ set autochdir ]])
