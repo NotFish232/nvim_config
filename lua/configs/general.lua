@@ -40,10 +40,9 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- relative line numbers (for rfu's sake)
-vim.cmd([[ set relativenumber ]])
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.statuscolumn = "%s %l %r "
 
 -- auto change dir when telescoping or otherwise selecting file
 vim.cmd([[ set autochdir ]])
-
--- have lualine be global instead of on selected buffer
-vim.opt.laststatus = 3
