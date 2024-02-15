@@ -136,6 +136,7 @@ local servers = {
         mccabe = { enabled = false },
         pycodestyle = { enabled = false },
         pyflakes = { enabled = false },
+        pylsp_mypy = { enabled = true, },
       },
     },
   },

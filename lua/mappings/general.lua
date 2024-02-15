@@ -29,3 +29,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Switch to the next focused window
 vim.keymap.set({ 'n', 't', 'v' }, '<leader><Tab>', '<C-\\><C-n><C-w>w', {noremap = true, silent = true})
+
+-- close a window with <leader>cc
+vim.keymap.set({ 'n', 't', 'v' }, '<leader>cc', '<C-\\><C-n><cmd>:q!<cr>', {noremap = true, silent = true})
