@@ -23,7 +23,8 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- keymap for commenting
-vim.keymap.set({ 'n', 'v' }, '<leader>g', 'gcc', { remap = true, silent = true })
+vim.keymap.set({ 'n' }, '<leader>g', 'gcc', { remap = true, silent = true })
+vim.keymap.set({ 'v' }, '<leader>g', 'gc', { remap = true, silent = true })
 
 -- ctrl t for new terminal
 vim.keymap.set({ 'n', 'v', 't' }, '<C-t>', '<C-\\><C-n>:tab term<Enter>i', { noremap = true, silent = true })
