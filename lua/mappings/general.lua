@@ -5,11 +5,7 @@ vim.keymap.set({ 'n', 'v' }, '<S-Tab>', '<C-\\><C-n>:bprevious<Enter>', { norema
 -- close tabs with crtl w
 vim.keymap.set({ 'n', 'v', 't' }, '<C-w>', '<C-\\><C-n>:bd!<Enter>', { noremap = true, silent = true })
 
--- open terminal with ctrl t, enter normal with escape
-vim.keymap.set({ 'n', 'v', 't' }, '<C-t>', '<C-\\><C-n>:tab term<Enter>i', { noremap = true, silent = true })
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
-
--- ctrl j for escape 
+-- ctrl j for escape
 vim.keymap.set({ 'i', 't', 'n', 'v' }, '<C-j>', '<C-\\><C-n><Esc>', { noremap = true, silent = true })
 
 -- Keymaps for better default experience
@@ -26,9 +22,11 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnos
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- ctrl t for new terminal
+vim.keymap.set({ 'n', 'v', 't' }, '<C-t>', '<C-\\><C-n>:tab term<Enter>i', { noremap = true, silent = true })
 
 -- Switch to the next focused window
-vim.keymap.set({ 'n', 't', 'v' }, '<leader><Tab>', '<C-\\><C-n><C-w>w', {noremap = true, silent = true})
+vim.keymap.set({ 'n', 't', 'v' }, '<leader><Tab>', '<C-\\><C-n><C-w>w', { noremap = true, silent = true })
 
 -- close a window with <leader>cc
-vim.keymap.set({ 'n', 't', 'v' }, '<leader>cc', '<C-\\><C-n><cmd>:q!<cr>', {noremap = true, silent = true})
+vim.keymap.set({ 'n', 't', 'v' }, '<leader>cc', '<C-\\><C-n><cmd>:q!<cr>', { noremap = true, silent = true })
