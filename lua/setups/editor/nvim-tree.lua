@@ -3,4 +3,8 @@ require("nvim-tree").setup {
         enable = true,
         update_cwd = true,
     },
+    git = {
+        ignore = false,
+
+    },
 }
