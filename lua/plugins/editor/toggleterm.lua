@@ -3,6 +3,8 @@ return {
     opts = {
         shade_terminals = false,
         start_in_insert = false,
+        persist_size = false,
+        shell = "bash --rcfile <(cat ~/.bashrc; echo 'PS1=\"\\w $ \"')",
         size = function(term)
             if term.direction == "horizontal" then
                 return vim.o.lines * 0.3
