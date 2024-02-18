@@ -1,4 +1,4 @@
--- fidge.nvim
+-- fidget.nvim
 return {
     'j-hui/fidget.nvim',
     opts = {},

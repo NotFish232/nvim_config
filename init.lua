@@ -45,10 +45,6 @@ end, 0)
 
 
 
--- [[ Configure Treesitter ]]
--- See `:help nvim-treesitter`
--- Defer Treesitter setup after first render to improve startup time of 'nvim {filename}'
-
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -182,6 +178,7 @@ mason_lspconfig.setup_handlers {
       capabilities = capabilities,
       on_attach = on_attach,
       settings = servers[server_name],
+      cmd = (servers[server_name] or {}).cmd,
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end,
