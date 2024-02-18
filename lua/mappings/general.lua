@@ -34,3 +34,8 @@ vim.keymap.set({ 'n', 't', 'v' }, '<leader><Tab>', '<C-\\><C-n><C-w>w', { norema
 
 -- close a window with <leader>cc
 vim.keymap.set({ 'n', 't', 'v' }, '<leader>cc', '<C-\\><C-n><cmd>:q!<cr>', { noremap = true, silent = true })
+
+
+-- clipboard
+vim.keymap.set('n', '<Leader>y', '"+y', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>p', '"+p', { noremap = true, silent = true })
