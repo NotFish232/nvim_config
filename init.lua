@@ -140,7 +140,7 @@ local servers = {
     },
   },
   rust_analyzer = {
-    ['rust-analyzer'] = {
+    rust_analyzer = {
       checkOnSave = {
         command = 'clippy',
       },
