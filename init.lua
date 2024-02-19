@@ -39,7 +39,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- See `:help telescope` and `:help telescope.setup()`
 
 
-require('setups')
+vim.defer_fn(function()
+  require('setups')
+end, 0)
+
 
 
 
