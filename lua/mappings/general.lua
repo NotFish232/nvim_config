@@ -35,7 +35,16 @@ vim.keymap.set({ 'n', 't', 'v' }, '<leader><Tab>', '<C-\\><C-n><C-w>w', { norema
 -- close a window with <leader>cc
 vim.keymap.set({ 'n', 't', 'v' }, '<leader>cc', '<C-\\><C-n><cmd>:q!<cr>', { noremap = true, silent = true })
 
+-- better undo
+vim.keymap.set('n', 'U', '<C-r>', { noremap = true })
 
 -- clipboard
 vim.keymap.set('n', '<Leader>y', '"+y', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>p', '"+p', { noremap = true, silent = true })
+
+local alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for i = 1, #alphabet do
+    local char = alphabet:sub(i, i)
+    vim.keymap.set('n', '<leader>Y' .. char, '"' .. char .. 'y', { noremap = true })
+    vim.keymap.set('n', '<leader>P' .. char, '"' .. char .. 'p', { noremap = true })
+end
