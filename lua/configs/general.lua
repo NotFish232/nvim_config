@@ -50,4 +50,3 @@ vim.cmd([[ set nomagic ]])
 vim.cmd([[ set autochdir ]])
 
 -- weird symbol stuff
-vim.cmd([[ set guicursor= ]])
