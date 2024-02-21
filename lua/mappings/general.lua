@@ -48,3 +48,9 @@ for i = 1, #alphabet do
     vim.keymap.set('n', '<leader>Y' .. char, '"' .. char .. 'y', { noremap = true })
     vim.keymap.set('n', '<leader>P' .. char, '"' .. char .. 'p', { noremap = true })
 end
+
+local numbers = '0123456789'
+for i = 1, #numbers do
+    local char = numbers:sub(i, i)
+    vim.keymap.set('n', '<leader>P' .. char, '"' .. char .. 'p', { noremap = true })
+end

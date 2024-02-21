@@ -1,4 +1,5 @@
 require('telescope').setup {
+    no_ignore = true,
     defaults = {
         mappings = {
             i = {
