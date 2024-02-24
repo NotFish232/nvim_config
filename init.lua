@@ -157,6 +157,7 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  ast_grep = {},
 }
 
 
