@@ -41,10 +41,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- See `:help telescope` and `:help telescope.setup()`
 
 
-vim.defer_fn(function()
-  require('setups')
-end, 0)
-
+require('setups')
 
 
 
@@ -134,7 +131,7 @@ local servers = {
         mccabe = { enabled = false },
         pycodestyle = { enabled = false },
         pyflakes = { enabled = false },
-        pylsp_mypy = { enabled = true, },
+        pylsp_mypy = { enabled = true, ignore_missing_imports = true },
       },
     },
   },

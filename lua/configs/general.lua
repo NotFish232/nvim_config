@@ -48,3 +48,7 @@ vim.cmd([[ set nomagic ]])
 
 -- auto change dir when telescoping or otherwise selecting file
 vim.cmd([[ set autochdir ]])
+
+
+-- fix weird gui glitching (maybe)
+vim.opt.termguicolors = true
