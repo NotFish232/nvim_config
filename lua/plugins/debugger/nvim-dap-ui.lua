@@ -19,7 +19,7 @@ return {
     end,
     dependencies = {
         "mfussenegger/nvim-dap",
-
+        "nvim-neotest/nvim-nio",
         "mfussenegger/nvim-dap-python", -- Optional adapter for Python
     },
 }
